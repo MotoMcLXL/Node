@@ -114,7 +114,7 @@ Bob-->Alice: I am good thanks!
 
 也许您还是一个 Markdown 语法的新手，在您完全熟悉它之前，我们在 **编辑区** 的顶部放置了一个如下图所示的工具栏，您可以使用鼠标在工具栏上调整格式，不过我们仍旧鼓励你使用键盘标记格式，提高书写的流畅度。
 
-![tool-editor](https://www.zybuluo.com/static/img/toolbar-editor.png)
+![tool-editor](http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg)
 
 ### 3. 编辑模式
 
