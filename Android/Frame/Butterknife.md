@@ -9,16 +9,20 @@
  
  ### 代码配置
  >* step1: 在Project的 build.gradle 中添加代码
-> buildscript {
->    repositories {
->        jcenter()
->    }
->    dependencies {
->        ...
->        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'  //添加这一行
->   }
-> }
+ ...gradle
+ buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        ...
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'  //添加这一行
+   }
+ }
+...
 
 >* step2: dependencies中添加
-> compile 'com.jakewharton:butterknife:8.8.1'
-> annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+ ...gradle
+ compile 'com.jakewharton:butterknife:8.8.1'
+ annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+ ...
