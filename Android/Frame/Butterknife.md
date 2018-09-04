@@ -7,7 +7,7 @@
  
  Butterknife因为是编译生成代码而不是通过反射注入，所以性能上没有什么损耗。
  
- ### 代码配置
+ ### 环境配置
  >* step1: 在Project的 build.gradle 中添加代码
  ```gradle
  buildscript {
@@ -26,3 +26,4 @@
  compile 'com.jakewharton:butterknife:8.8.1'
  annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
  ```
+### 使用心得与注意事项
