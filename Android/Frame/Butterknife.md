@@ -59,15 +59,15 @@ https://github.com/JakeWharton/butterknife
    ### Butterknife插件：zelezny
 > @BindView—->绑定一个view；id为一个view 变量
 
-@BindViews —-> 绑定多个view；id为一个view的list变量
+  @BindViews —-> 绑定多个view；id为一个view的list变量
 
-@BindArray—-> 绑定string里面array数组；@BindArray(R.array.city ) String[] citys ;
+  @BindArray—-> 绑定string里面array数组；@BindArray(R.array.city ) String[] citys ;
 
-@BindBitmap—->绑定图片资源为Bitmap；@BindBitmap( R.mipmap.wifi ) Bitmap bitmap;
+  @BindBitmap—->绑定图片资源为Bitmap；@BindBitmap( R.mipmap.wifi ) Bitmap bitmap;
 
-@BindBool —->绑定boolean值
+  @BindBool —->绑定boolean值
 
-@BindColor —->绑定color；@BindColor(R.color.colorAccent) int black;
+  @BindColor —->绑定color；@BindColor(R.color.colorAccent) int black;
 
 @BindDimen —->绑定Dimen；@BindDimen(R.dimen.borth_width) int mBorderWidth;
 
