@@ -36,7 +36,7 @@ https://github.com/JakeWharton/butterknife
  > 1、在Activity 类中绑定 ：**ButterKnife.bind(this);** 必须在**setContentView();** 之后绑定；
  >  且父类bind绑定后，子类不需要再bind。
 
- > 2、在非Activity 类（eg：Fragment、ViewHold）中绑定： ButterKnife.bind(this，view);
+ > 2、在非Activity 类（eg：Fragment、ViewHold）中绑定： ButterKnife.bind(**this，view**);
  >   这里的**this**不能替换成getActivity（）。
 
  > 3、在Activity中不需要做解绑操作，在Fragment 中必须在onDestroyView()中做解绑操作。
