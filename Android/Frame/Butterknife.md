@@ -33,7 +33,7 @@ https://github.com/JakeWharton/butterknife
 
 ### 使用心得与注意事项
 ```
-1、在Activity 类中绑定 ：** ButterKnife.bind(this); ** 必须在setContentView();
+1、在Activity 类中绑定 ：**ButterKnife.bind(this);** 必须在setContentView();
 之后绑定；且父类bind绑定后，子类不需要再bind。
 
 2、在非Activity 类（eg：Fragment、ViewHold）中绑定： 
