@@ -56,7 +56,7 @@ https://github.com/JakeWharton/butterknife
    ### Butterknife插件：zelezny
    > 工具栏File 找到Settings…或者使用快捷点Ctrl+Alt+s 打开。搜索zelezny下载插件并安装，重启Android Studio
    
-   ### Butterknife插件：zelezny
+   ### Butterknife注解
 > @BindView—->绑定一个view；id为一个view 变量
 
 > @BindViews —-> 绑定多个view；id为一个view的list变量
@@ -103,4 +103,41 @@ https://github.com/JakeWharton/butterknife
 
 > @Optional —->选择性注入，如果当前对象不存在，就会抛出一个异常，为了压制这个异常，可以在变量或者方法上加入一下注解,让注入变成选择性的,如果目标View存在,则注入, 不存在,则什么事情都不做
 
+### ButterKnife的代码混淆
+在混淆文件中，添加如下代码：
+```
+-keep class butterknife.** { *; }  
+-dontwarn butterknife.internal.**  
+-keep class **$$ViewBinder { *; }  
 
+-keepclasseswithmembernames class * {  
+    @butterknife.* <fields>;  
+}  
+
+-keepclasseswithmembernames class * {  
+    @butterknife.* <methods>;  
+}
+```
+
+ ### 使用注意事项
+ 
+> ButterKinfe的注解标签因版本不同而有所变化。
+> 8.0.0之前的Bind标签在8.0.0之后变成了BindView，而8.7.0之后在绑定view时，要用R2.id.XXX而不再是常用的R.id.XXX了。
+具体变化情况和查看gitHub上的提交日志：
+https://github.com/JakeWharton/butterknife/blob/master/CHANGELOG.md#version-800-2016-04-25
+
+> 默认情况下，@bind和 listener 的绑定是必需的。如果无法找到目标视图，将抛出一个异常。
+要抑制此行为并创建可选绑定，可以将@Nullable注解添加到字段中，或将@Optional注解添加到方法。
+任何被命名为@Nullable的注解都可以用于成员变量。建议使用android的”support-annotations”库中的@Nullable注解。
+
+```
+@Nullable  
+@BindView(R.id.might_not_be_there)   
+TextView mightNotBeThere;  
+
+@Optional  
+@OnClick(R.id.maybe_missing)   
+public void onMaybeMissingClicked() {  
+    // TODO ...  
+}
+```
