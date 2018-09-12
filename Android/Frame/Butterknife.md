@@ -10,15 +10,7 @@ https://github.com/JakeWharton/butterknife
  > ##### 2、Dragger主要用于业务框架代码注入。
  
  Butterknife因为是编译生成代码而不是通过反射注入，所以性能上没有什么损耗。
- | 用途             |
-| -------------    |
-| 绑定View          | 
-| 绑定资源           | 
-| 事件绑定           | 
-| 绑定监听           | 
-| 使用findById      | 
-| 设置多个view的属性  | 
-| ignore_errors    | 
+ > 绑定View、资源、事件、获取多个view.
  
  ### 环境配置
  >* step1: 在Project的 build.gradle 中添加代码
@@ -61,6 +53,7 @@ https://github.com/JakeWharton/butterknife
  > 7、使用ButterKnife.bind(this，view)绑定一个view的子节点字段。如果你在子View的布局里或者自定义view的构造方法里 使用了inflate,
    你可以立刻调用此方法。或者，从XML inflate来的自定义view类型可以在onFinishInflate回调方法中使用它。
    
-   ### 使用心得与注意事项
+   ### Butterknife插件：zelezny
+   > 工具栏File 找到Settings…或者使用快捷点Ctrl+Alt+s 打开。搜索zelezny下载插件并安装，重启Android Studio
 
 
